@@ -20,7 +20,18 @@ public class Customer implements Comparable<Customer> {
 	private Double DepositAmount;
 	private Double WithdrawAmoun;
 	private Double balance;
+	private Boolean verify;
+
+	public Boolean getVerify(boolean b) {
+		return verify;
+	}
+
+	public void setVerify(Boolean verify) {
+		this.verify = verify;
+	}
+
 	private Date date;
+	
 
 	@OneToMany(mappedBy = "customer")
 	private List<Account_Transaction> list;
